@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import { Layout } from "../components/Layout/Layout"
 import { ROUTHES } from "./routes"
 
-import {HomePage} from "../pages/HomePage/HomePage"
+import HomePage from "../pages/HomePage/HomePage"
 import { LaunchesPage } from "../pages/LaunchesPage/LaunchesPage"
 import { LauncDetailPage } from "../pages/LaunchDetailPage/LaunchDetailPage"
 import { ShipsPage } from "../pages/ShipsPage/ShipsPage"
