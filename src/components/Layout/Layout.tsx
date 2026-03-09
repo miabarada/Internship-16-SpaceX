@@ -8,8 +8,8 @@ type LayoutProps = {
 export function Layout({children}: LayoutProps) {
    return (
       <div>
-         <header>
-            <h2>SpaceX</h2>
+         <header className={styles.header}>
+            <h2 className={styles.title}>SpaceX</h2>
             <Navbar />
          </header>
          <main className={styles.main}>{children}</main>

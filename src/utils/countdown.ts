@@ -2,7 +2,7 @@ export function getCountdown(date: string) {
    const now = new Date().getTime()
    const launchDate = new Date(date).getTime()
 
-   const difference = launchDate - now;
+   const difference = Math.abs(launchDate - now);
 
    const days = Math.floor(difference / (1000 * 60 * 60 * 24))
    const hours = Math.floor((difference / (1000 * 60 * 60) % 24))

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getCompanyInfo, getNextLaunch } from "../../api/spacexApi"
 import { getCountdown } from "../../utils/countdown"
+import styles from './HomePage.module.scss'
 
 function HomePage() {
    const [launch, setLaunch] = useState<any>(null)
@@ -26,26 +27,28 @@ function HomePage() {
    }
 
    return (
-      <div>
-         <section>
-            <h1>Next launch</h1>
+      <div className={styles.container}>
+         <div  className={styles.info}>
+            <section className={styles.launch}>
+               <h1 className={styles.launchTitle}>Next launch:</h1>
 
-            {countdown && (
-               <h2>{countdown.days}d {countdown.hours}h {countdown.minutes}m {countdown.seconds}s</h2>
-            )}
+               {countdown && (
+                  <h2>{countdown.days}d {countdown.hours}h {countdown.minutes}m {countdown.seconds}s</h2>
+               )}
 
-            <p>{launch.name}</p>
-         </section>
+               <p>{launch.name}</p>
+            </section>
 
-         <section>
-            <h1>About SpaceX</h1>
-            <p>{company.summary}</p>
-            <div>
-               <p>Founded: {company.founded}</p>
-               <p>Founder: {company.founder}</p>
-               <p>Employees: {company.employees}</p>
-            </div>
-         </section>
+            <section className={styles.details}>
+               <h1>About SpaceX</h1>
+               <p>{company.summary}</p>
+               <div>
+                  <p>Founded: {company.founded}</p>
+                  <p>Founder: {company.founder}</p>
+                  <p>Employees: {company.employees}</p>
+               </div>
+            </section>
+         </div>   
       </div>
    )
 }

@@ -5,9 +5,9 @@ import styles from "./Navbar.module.scss"
 const Navbar = () => {
    return (
       <nav className={styles.nav}>
-         <NavLink to={ROUTHES.Home}>Home</NavLink>
-         <NavLink to={ROUTHES.Launches}>Launches</NavLink>
-         <NavLink to={ROUTHES.Ships}>Ships</NavLink>
+         <NavLink to={ROUTHES.Home} className={styles.navlink}>Home</NavLink>
+         <NavLink to={ROUTHES.Launches} className={styles.navlink}>Launches</NavLink>
+         <NavLink to={ROUTHES.Ships} className={styles.navlink}>Ships</NavLink>
       </nav>
    );
 };
