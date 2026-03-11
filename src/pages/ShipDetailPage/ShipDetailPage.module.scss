@@ -1,0 +1,37 @@
+.shipPage {
+   background-color: #040404;
+   padding: 40px;
+   padding-top: 95px;
+   display: flex;
+   flex-direction: row;
+   gap: 40px;
+   min-height: 100vh;
+   max-width: 100vw;
+   color: white;
+}
+
+.title {
+   color: white;
+   font-size: 36px;
+   font-weight: 800;
+}
+
+.patch {
+   width: 300px;
+   height: 300px;
+   aspect-ratio: 4 / 4;
+   object-fit: cover;
+}
+
+.info {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+@media (max-width: 768px) {
+   .shipPage {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+}

@@ -6,7 +6,7 @@ import HomePage from "../pages/HomePage/HomePage"
 import LaunchesPage from "../pages/LaunchesPage/LaunchesPage"
 import LaunchDetailPage from "../pages/LaunchDetailPage/LaunchDetailPage"
 import ShipsPage from "../pages/ShipsPage/ShipsPage"
-import { ShipDetailPage } from "../pages/ShipDetailPage/ShipDetailPage"
+import ShipDetailPage from "../pages/ShipDetailPage/ShipDetailPage"
 import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage"
 
 export function AppRouter() {

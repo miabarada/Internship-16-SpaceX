@@ -1,10 +1,12 @@
 export async function getNextLaunch() {
    const res = await fetch("https://api.spacexdata.com/v4/launches/next")
+   if (!res.ok) throw new Error("Failed to fetch details")
    return res.json()
 }
 
 export async function getCompanyInfo() {
    const res = await fetch("https://api.spacexdata.com/v4/company")
+   if (!res.ok) throw new Error("Failed to fetch details")
    return res.json()
 }
 
@@ -39,16 +41,19 @@ export async function getLaunches(
       })
    })
 
+   if (!res.ok) throw new Error("Failed to fetch details")
    return res.json()
 }
 
 export async function getLaunch(id: string) {
    const res = await fetch(`https://api.spacexdata.com/v4/launches/${id}`)
+   if (!res.ok) throw new Error("Failed to fetch details")
    return res.json()
 }
 
 export async function getRocket(id: string) {
    const res = await fetch(`https://api.spacexdata.com/v4/rockets/${id}`)
+   if (!res.ok) throw new Error("Failed to fetch details")
    return res.json()
 }
 
@@ -74,5 +79,13 @@ export async function getShips(
          options: { page, limit: 10 }
       })
    })
+   
+   if (!res.ok) throw new Error("Failed to fetch details")
+   return res.json()
+}
+
+export async function getShip(id: string) {
+   const res = await fetch(`https://api.spacexdata.com/v4/ships/${id}`)
+   if (!res.ok) throw new Error("Failed to fetch ship details")
    return res.json()
 }

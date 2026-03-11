@@ -6,7 +6,7 @@ export default function ShipCard({ ship }: any) {
       <Link to={`/ships/${ship.id}`} className={styles.cardLink}>
          {ship.image ? <img src={ship.image} alt={ship.name} className={styles.image}/> : <div className={styles.image}>No image</div>}
          <div className={styles.info}>
-            <h2 className={styles.title}>{ship.name}</h2>
+            <h2 className={styles.title}>{ship.name} <span className={styles.type}>| {ship.type}</span></h2>
             
             {ship.active === true && <p className={styles.label}>Active</p>}
             {ship.active === false && <p className={styles.label}>Inactive</p>}
