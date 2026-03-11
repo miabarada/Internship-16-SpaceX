@@ -1,0 +1,60 @@
+.launchesPage {
+   background-color: #040404;
+   padding: 40px;
+   padding-top: 69px;
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   min-height: 100vh;
+}
+
+.header {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 24px;
+}
+
+.title {
+   color: white;
+   font-size: 36px;
+   font-weight: 800;
+}
+
+.search {
+   font-size: 16px;
+   background-color: transparent;
+   border: none;
+   border-bottom: 0.3px solid white;
+   padding: 8px;
+   color: rgb(113, 113, 113)
+}
+
+.search:focus {
+   border: none;
+   outline: none;
+   border: 0.3px solid white;
+}
+
+.filter {
+   font-size: 16px;
+   background-color: transparent;
+   border: none;
+   border-bottom: 0.3px solid white;
+   padding: 8px;
+   color: rgb(113, 113, 113)
+}
+
+.filters {
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+}
+
+.pageButtons {
+   align-self: center;
+   display: flex;
+   flex-direction: row;
+   gap: 8px;
+}

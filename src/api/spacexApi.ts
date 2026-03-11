@@ -28,7 +28,7 @@ export async function getLaunches(
    const res = await fetch("https://api.spacexdata.com/v4/launches/query", {
       method: "POST",
       headers: {
-         "Content-Type": "applicaation/json"
+         "Content-Type": "application/json"
       },
       body: JSON.stringify({
          query,
