@@ -6,7 +6,7 @@
 }
 
 .header {
-   background-color: #040404;
+   background-color: var(--bg-color);
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -20,6 +20,6 @@
 
 .title {
    font-size: 32px;
-   color: white;
+   color: var(--color);
    font-weight: 800;
 }

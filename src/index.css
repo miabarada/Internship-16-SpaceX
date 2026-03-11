@@ -1,0 +1,9 @@
+:root[data-theme="dark"] {
+   --bg-color: #040404;
+   --color: white;
+}
+
+:root[data-theme="light"] {
+   --bg-color: white;
+   --color: #040404;
+}

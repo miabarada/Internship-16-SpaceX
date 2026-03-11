@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getLaunch, getRocket } from "../../api/spacexApi";
 import styles from './LaunchDetailPage.module.scss'
 import Button from "../../components/Button/Button";
+import { NotFoundPage } from "../NotFoundPage/NotFoundPage";
 
 export default function LaunchDetailPage() {
    const { id } = useParams<{ id: string }>()
@@ -30,7 +31,7 @@ export default function LaunchDetailPage() {
    }, [id])
 
    if (loading) return <p>Loading..</p>
-   if (!launch) return <p>Launch not found</p>
+   if (!launch) return <NotFoundPage />
 
    return (
       <div className={styles.launchPage}>

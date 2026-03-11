@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import styles from './ShipDetailPage.module.scss'
 import { useEffect, useState } from 'react'
 import { getShip } from '../../api/spacexApi'
+import { NotFoundPage } from '../NotFoundPage/NotFoundPage'
 
 export default function ShipDetailPage() {
    const { id } = useParams<{ id: string }>()
@@ -23,7 +24,7 @@ export default function ShipDetailPage() {
    }, [id])
 
    if (loading) return <p>Loading ship details...</p>
-   if (!ship) return <p>Ship not found</p>
+   if (!ship) return <NotFoundPage />
 
    return (
       <div className={styles.shipPage}>

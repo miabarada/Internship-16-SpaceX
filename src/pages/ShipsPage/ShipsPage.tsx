@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { useShips } from "../../hooks/useShips";
 import { useCallback, useEffect, useRef } from "react";
-import ShipCard from "../../components/ShipCard/Shipcard";
+import ShipCard from "../../components/ShipCard/ShipCard";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import styles from './ShipsPage.module.scss'
 
