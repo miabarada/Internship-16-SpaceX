@@ -22,30 +22,6 @@
    font-weight: 800;
 }
 
-.search {
-   font-size: 16px;
-   background-color: transparent;
-   border: none;
-   border-bottom: 0.3px solid white;
-   padding: 8px;
-   color: rgb(113, 113, 113)
-}
-
-.search:focus {
-   border: none;
-   outline: none;
-   border: 0.3px solid white;
-}
-
-.filter {
-   font-size: 16px;
-   background-color: transparent;
-   border: none;
-   border-bottom: 0.3px solid white;
-   padding: 8px;
-   color: rgb(113, 113, 113)
-}
-
 .filters {
    display: flex;
    flex-direction: row;
@@ -57,4 +33,11 @@
    display: flex;
    flex-direction: row;
    gap: 8px;
+}
+
+@media (max-width: 768px) {
+   .header {
+      flex-direction: column;
+      align-items: flex-start;
+   }
 }

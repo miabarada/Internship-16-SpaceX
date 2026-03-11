@@ -41,3 +41,13 @@ export async function getLaunches(
 
    return res.json()
 }
+
+export async function getLaunch(id: string) {
+   const res = await fetch(`https://api.spacexdata.com/v4/launches/${id}`)
+   return res.json()
+}
+
+export async function getRocket(id: string) {
+   const res = await fetch(`https://api.spacexdata.com/v4/rockets/${id}`)
+   return res.json()
+}
