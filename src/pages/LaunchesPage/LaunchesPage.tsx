@@ -15,7 +15,7 @@ export default function LaunchesPage() {
 
    const { data, loading } = useLaunches(page, search, filter)
 
-   function handlesearch(e: React.ChangeEvent<HTMLInputElement>) {
+   function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
       setParams({ search: e.target.value, filter, page: "1"})
    }
 
@@ -38,7 +38,7 @@ export default function LaunchesPage() {
          <div className={styles.header}>
             <h1 className={styles.title}>Launches</h1>
             <div className={styles.filters}>
-               <SearchInput placeholder="Search launch..." value={search} onChange={handlesearch}/>
+               <SearchInput placeholder="Search launch..." value={search} onChange={handleSearch}/>
                <FilterSelect 
                   value={filter} 
                   onChange={handleFilter} 
