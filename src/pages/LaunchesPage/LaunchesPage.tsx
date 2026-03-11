@@ -3,6 +3,8 @@ import { useLaunches } from "../../hooks/useLaunches"
 import LaunchCard from "../../components/LaunchCard/LaunchCard"
 import styles from './LaunchesPage.module.scss'
 import Button from "../../components/Button/Button"
+import SearchInput from "../../components/SearchInput/SearchInput"
+import FilterSelect from "../../components/FilterSelect/FilterSelect"
 
 export default function LaunchesPage() {
    const [params, setParams] = useSearchParams()
@@ -36,13 +38,17 @@ export default function LaunchesPage() {
          <div className={styles.header}>
             <h1 className={styles.title}>Launches</h1>
             <div className={styles.filters}>
-               <input placeholder="Search launch..." value={search} onChange={handlesearch} className={styles.search}/>
-               <select value={filter} onChange={handleFilter} className={styles.filter}>
-                  <option value="">All</option>
-                  <option value="success">Success</option>
-                  <option value="failed">Failed</option>
-                  <option value="upcoming">Upcoming</option>
-               </select>
+               <SearchInput placeholder="Search launch..." value={search} onChange={handlesearch}/>
+               <FilterSelect 
+                  value={filter} 
+                  onChange={handleFilter} 
+                  options={[
+                     { label: "All", value: "" },
+                     { label: "Success", value: "success" },
+                     { label: "Failed", value: "failed" },
+                     { label: "Upcoming", value: "upcoming" },
+                  ]}
+                  />
             </div>
          </div>
 
